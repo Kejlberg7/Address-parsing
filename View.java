@@ -45,8 +45,10 @@ public class View extends JFrame implements Observer {
 		public static final long serialVersionUID = 20160203;
 
 		public void paint(Graphics g) {
-			g.drawString(typed.toString(), 10, 20);
-			int ycoord = 50;
+			g.drawString("Indtast Adresse i dette format:", 10, 20);
+			g.drawString("(Vejnavn Vejnummer, Postnummer Bynavn)", 10, 30);
+			g.drawString(typed.toString(), 10, 50);
+			int ycoord = 80;
 			for (Address a : model) {
 				g.drawString(a.street() + " " + a.house(), 10, ycoord);
 				g.drawString(a.postcode() + " " + a.city(), 10, ycoord+20);

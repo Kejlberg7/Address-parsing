@@ -34,9 +34,9 @@ public class Address {
 	public String postcode() { return postcode; }
 	public String city()     { return city; }
 
-	static String pattern1="([A-Za-zæøåÆØÅ ]+) ([0-9A-Za-z]+), ([0-9]{4}) ([A-Za-zæøåÆØÅ ]+)";
+	static String pattern1="([A-Za-z\u00E6\u00f8\u00E5\u00C6\u00D8\u00C5 ]+) ([0-9A-Za-z]+), ([0-9]{4}) ([A-Za-z\u00E6\u00f8\u00E5\u00C6\u00D8\u00C5 ]+)";
 	static Pattern pat1 = Pattern.compile(pattern1);
-	
+
 
 	public static Address parse(String s) {
 		Builder b = new Builder();
